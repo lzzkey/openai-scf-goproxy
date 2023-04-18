@@ -1,0 +1,11 @@
+edition: 1.0.0          #  命令行YAML规范版本，遵循语义化版本（Semantic Versioning）规范
+name: openai-scf-goproxy   #  应用名称
+access: openai-scf-goproxy    #  秘钥别名
+
+actions: globalActions #  自定义全局的执行逻辑
+
+services: # 可以包括多个服务
+  ServiceName: openai-scf-goproxy# 服务名称
+    component: goproxy  #  组件名称
+    props: serviceProp        #  组件的属性值
+    actions: serviceActions   #  自定义执行逻辑
